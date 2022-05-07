@@ -1,0 +1,19 @@
+import styled from "styled-components/native";
+import Modal from 'react-native-modal';
+
+export const StyledView = styled.View`
+    padding-vertical:20px;
+    padding-horizontal:10%
+    width:100%;
+    border-top-end-radius:20px;
+    border-top-start-radius:20px;
+`
+
+export const StyledRoundedButtonContainer = styled.View`
+    flex-direction:row;
+    justify-content:space-around;
+`
+
+export const StyledButtonContainer = styled.View`
+    margin-top:15px;
+`
