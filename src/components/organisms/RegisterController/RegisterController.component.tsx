@@ -21,7 +21,7 @@ const RegisterController:FC<LoginControllerProps> = ({isVisible, control,handleS
     <StyledModal swipeDirection="down" hasBackdrop={false} isVisible={isVisible} onSwipeComplete={closeModal} > 
       <StyledView >
           <Heading color="secondary">REGISTRARSE</Heading>
-          <ControlledInput required autoCapitalize='none' name="email" placeholder='Email' control={control} />
+          <ControlledInput required autoCapitalize='none' name="email" placeholder='Correo electrónico' control={control} />
           <ControlledPasswordInput required style={{ 
                           borderRightColor:'pink', borderRightWidth:3, 
                           borderLeftColor:'pink', borderLeftWidth:3}} autoCapitalize='none' name="password" placeholder='Contraseña' control={control} />

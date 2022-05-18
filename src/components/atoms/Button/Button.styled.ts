@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 
 interface ButtonProps{
-    size: 'full' | 'xl' | 'lg' | 'md' | 'sm';
+    size: 'full' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 }
 
 const StyledButton = styled.TouchableOpacity<ButtonProps>`
@@ -13,6 +13,7 @@ const StyledButton = styled.TouchableOpacity<ButtonProps>`
         case 'lg': return 60
         case 'md': return 50
         case 'sm': return 30
+        case 'xs': return 15
         default:return 100
     }}}%;
     border-radius:10px;

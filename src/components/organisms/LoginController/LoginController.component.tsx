@@ -25,15 +25,15 @@ const LoginController:FC<LoginControllerProps> = ({isVisible, control,handleSubm
           <Heading color="primary">Inicio rápido</Heading>
           <StyledRoundedButtonContainer>
             <AwesomeButton backgroundDarker="#ec6a9c" textSize={15} textColor="#ec6a9c" backgroundColor="white" type="primary" width={90} height={60} rounded onPress={()=>fastSignIn({email:"admin@gmail.com", password:"Admin1234"})}>Admin</AwesomeButton>
-            <AwesomeButton backgroundDarker="#ec6a9c" textSize={15} textColor="#ec6a9c" backgroundColor="white" type="primary" width={90} height={60} rounded onPress={()=>fastSignIn({email:"tecnico@gmail.com", password:"Tecnico1234"})}>Tecnico</AwesomeButton>
+            <AwesomeButton backgroundDarker="#ec6a9c" textSize={15} textColor="#ec6a9c" backgroundColor="white" type="primary" width={90} height={60} rounded onPress={()=>fastSignIn({email:"tecnico@gmail.com", password:"Tecnico1234"})}>Técnico</AwesomeButton>
             <AwesomeButton backgroundDarker="#ec6a9c" textSize={15} textColor="#ec6a9c" backgroundColor="white" type="primary" width={90} height={60} rounded onPress={()=>fastSignIn({email:"cliente@gmail.com", password:"Cliente1234"})}>Cliente</AwesomeButton>
           </StyledRoundedButtonContainer>
-            <ControlledInput required autoCapitalize='sentences' name="email" placeholder='Email' control={control} />
+            <ControlledInput required autoCapitalize='sentences' name="email" placeholder='Correo electrónico' control={control} />
             <ControlledPasswordInput required style={{borderBottomEndRadius:35, borderBottomStartRadius:35, 
                             borderBottomColor:'pink', borderBottomWidth:3, 
                             borderRightColor:'pink', borderRightWidth:3, 
                             borderLeftColor:'pink', borderLeftWidth:3}}
-                            autoCapitalize='none' name="password" placeholder='Password' control={control} />
+                            autoCapitalize='none' name="password" placeholder='Contraseña' control={control} />
             <StyledButtonContainer>
             <Button onPress={handleSubmit} size='xl'>Ingresar</Button>
             <Button variant='tertiary' size='xl' onPress={openRegister}>¿No estás registrado?</Button>

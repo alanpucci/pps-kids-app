@@ -3,7 +3,7 @@ import { TouchableOpacityProps } from 'react-native'
 import { StyledButtonPrimary, StyledButtonSecondary, StyledTextPrimary, StyledTextSecondary, StyledButtonTertiary, StyledTextTertiary } from './Button.styled';
 
 interface ButtonProps extends TouchableOpacityProps{
-    size?: 'full' | 'xl' | 'lg' | 'md' | 'sm';
+    size?: 'full' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
     variant?: 'primary' | 'secondary' | 'tertiary'
 }
 
