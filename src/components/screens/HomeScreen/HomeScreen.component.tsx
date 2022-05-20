@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { handleLogin, handleLogout } from '../../../redux/authReducer';
-import { StyledImageBackground, StyledImageContainer, StyledRow } from './HomeScreen.styled';
+import { handleLogout } from '../../../redux/authReducer';
+import { StyledImageBackground, StyledImageButton, StyledRow } from './HomeScreen.styled';
 import { View } from 'react-native';
 import { FloatingAction } from 'react-native-floating-action';
-import ImageButton from '../../atoms/ImageButton/ImageButton.component';
 import Image from '../../atoms/Image/Image.component';
 import { LANGS, THEMES } from '../../../consts/consts';
 import { imageHandler } from '../../../utils/imageHandler';
@@ -84,17 +83,12 @@ const HomeScreen = () => {
     <View>
       <StyledImageBackground source={imageHandler('pink')} resizeMode="cover">
         <StyledRow>
-          <ImageButton onPress={()=>playSound(0)} src={imageHandler(theme)[0]} />
-          <ImageButton onPress={()=>playSound(1)} src={imageHandler(theme)[1]} />
-
-        </StyledRow>
-        <StyledRow>
-          <ImageButton onPress={()=>playSound(2)} src={imageHandler(theme)[2]} />
-          <ImageButton onPress={()=>playSound(3)} src={imageHandler(theme)[3]} />
-        </StyledRow>
-        <StyledRow>
-          <ImageButton onPress={()=>playSound(4)} src={imageHandler(theme)[4]} />
-          <ImageButton onPress={()=>playSound(5)} src={imageHandler(theme)[5]} />
+          <StyledImageButton onPress={()=>playSound(0)} src={imageHandler(theme)[0]} />
+          <StyledImageButton onPress={()=>playSound(1)} src={imageHandler(theme)[1]} />
+          <StyledImageButton onPress={()=>playSound(2)} src={imageHandler(theme)[2]} />
+          <StyledImageButton onPress={()=>playSound(3)} src={imageHandler(theme)[3]} />
+          <StyledImageButton onPress={()=>playSound(4)} src={imageHandler(theme)[4]} />
+          <StyledImageButton onPress={()=>playSound(5)} src={imageHandler(theme)[5]} />
         </StyledRow>
         <Button size='xs' onPress={handleSignOut} >
           <Ionicons name="exit-outline" size={30} color="white" />

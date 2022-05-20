@@ -7,11 +7,12 @@ interface ImageButtonProps{
     onPress:()=>void;
     src?:ImageSourcePropType;
     color?:string;
+    style?:any;
 }
 
-const ImageButton:FC<ImageButtonProps> = ({onPress,src=1, color='white'}) => {
+const ImageButton:FC<ImageButtonProps> = ({onPress,src=1, color='white', style}) => {
   return (
-    <AwesomeButton backgroundDarker='#ec6a9c' onPress={onPress} width={120} height={120} backgroundColor='white' rounded>
+    <AwesomeButton style={style} backgroundDarker='#ec6a9c' onPress={onPress} width={120} height={120} backgroundColor='white' rounded>
         {src!=1 ?<StyledImage resizeMode="contain" source={src} />:<StyledViewColor color={color}/>}
     </AwesomeButton>
   )
